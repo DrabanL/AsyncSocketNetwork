@@ -7,7 +7,7 @@
     <ProjectGuid>{8B043A40-E112-4EF3-B6D0-09C52C30F470}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SocketNetwork.Example.Utilities</RootNamespace>
+    <RootNamespace>AsyncSocketNetwork.Example.Utilities</RootNamespace>
     <AssemblyName>Example.Utilities</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

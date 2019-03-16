@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{2D202AB3-267D-4876-BB4A-AEF0CCE9CF7C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>SocketNetwork.Example.Client</RootNamespace>
+    <RootNamespace>AsyncSocketNetwork.Example.Client</RootNamespace>
     <AssemblyName>Example.Client</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
