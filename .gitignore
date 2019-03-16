@@ -328,3 +328,11 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+
+# Custom
+
+/.vs
+/Example.Client/obj/Debug
+/Example.Server/obj/Debug
+/Example.Utilities/obj/Debug
+/AsyncSocketNetwork/obj/Debug
