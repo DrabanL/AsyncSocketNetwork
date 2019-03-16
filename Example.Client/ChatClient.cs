@@ -73,6 +73,14 @@ namespace AsyncSocketNetwork.Example.Client {
         /// </summary>
         private void processReceiveError(ChatClient client, Exception ex) {
             Console.WriteLine($"receive error! {ex}");
+
+            if (ex is SocketException) {
+                if ((ex as SocketException).SocketErrorCode == SocketError.MessageSize) {
+                    Console.WriteLine("Message size limit reached.");
+
+                    client.Shutdown();
+                }
+            }
         }
 
         /// <summary>

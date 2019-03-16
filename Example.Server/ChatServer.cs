@@ -31,14 +31,14 @@ namespace AsyncSocketNetwork.Example.Server {
         /// Handle error on async accept operation.
         /// </summary>
         void IServerHandler.OnAcceptError(Exception ex) {
-            Console.WriteLine($"Server accept error! {ex}");
+            Console.WriteLine($"accept error! {ex}");
         }
 
         /// <summary>
         /// Handle received connection on the socket object.
         /// </summary>
         async void IServerHandler.OnSocketAccepted(Socket socket) {
-            Console.WriteLine($"(Server) client connected {socket.RemoteEndPoint}");
+            Console.WriteLine($"client {socket.RemoteEndPoint} connected");
 
             // create new chat member from received socket
             using (var client = new ChatMember(socket)) {
@@ -89,7 +89,7 @@ namespace AsyncSocketNetwork.Example.Server {
         /// Processes the closed chat member connection.
         /// </summary>
         private async Task processClosedConnectionAsync(ChatMember client) {
-            Console.WriteLine($"(Server) client disconnected {client.RemoteEndPoint}");
+            Console.WriteLine($"client {client.RemoteEndPoint} disconnected");
 
             // notify all participants of the leave (excluding the member that left)
             await sendAllMessage("Officer", $"{client.Name} has left the conversation.", client.Name);
@@ -99,7 +99,15 @@ namespace AsyncSocketNetwork.Example.Server {
         /// Processes the error that occured in the async operation.
         /// </summary>
         private void processReceiveError(ChatMember client, Exception ex) {
-            Console.WriteLine($"(Server) client receive error: {ex}");
+            Console.WriteLine($"client {client.RemoteEndPoint} receive error: {ex}");
+
+            if (ex is SocketException) {
+                if ((ex as SocketException).SocketErrorCode == SocketError.MessageSize) {
+                    Console.WriteLine($"client {client.RemoteEndPoint} message size limit reached.");
+
+                    client.Shutdown();
+                }
+            }
         }
 
         /// <summary>

@@ -15,7 +15,6 @@ namespace AsyncSocketNetwork {
         public EndPoint RemoteEndPoint => _client?.Client.RemoteEndPoint;
         public bool Connected => _client?.Connected ?? false;
 
-        private bool _isDisposeInvoked;
         private TcpClient _client;
         private NetworkStream _stream;
         private readonly CancellationTokenSource _cancellationSource;
@@ -93,7 +92,7 @@ namespace AsyncSocketNetwork {
                     var isReceiveCompleted = messageHandler.CompleteReceive(bytesTransferred);
                     if (isReceiveCompleted == null) {
                         // invoke the client handler to process the error in the implementation
-                        ClientHandler?.OnReceiveError(this, new Exception(SocketError.MessageSize.ToString()));
+                        ClientHandler?.OnReceiveError(this, new SocketException((int)SocketError.MessageSize));
                         continue;
                     }
 
@@ -169,8 +168,6 @@ namespace AsyncSocketNetwork {
         protected bool disposedValue = false; // To detect redundant calls
 
         protected virtual void Dispose(bool disposing) {
-            _isDisposeInvoked = true;
-
             if (!disposedValue) {
                 
                 if (disposing) {
