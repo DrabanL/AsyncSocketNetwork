@@ -23,8 +23,8 @@ namespace AsyncSocketNetwork.Example.Client {
                 // now that we are connected to server, can send the 'Join' command
                 await _chatClient.SendJoin();
 
-                // get chat input on different thread, not to block our execution when doing Console.ReadLine
-                var chatInputJob = acceptChatInputAsync();
+                // get chat input on seperate task, not to block our execution when doing Console.ReadLine
+                var chatInputJob = runChatInputLoopAsync();
 
                 // begin receving data from server, in a ChatMessage object that extends NetworkMessageHandler
                 // block execution until socket is disconnected/faulted
@@ -37,7 +37,7 @@ namespace AsyncSocketNetwork.Example.Client {
             }
         }
 
-        private static async Task acceptChatInputAsync() {
+        private static async Task runChatInputLoopAsync() {
             // let the caller continue its execution
             await Task.Yield();
 
