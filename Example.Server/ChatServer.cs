@@ -1,13 +1,13 @@
-﻿using AsyncSocketNetwork.Example.Utilities.Models;
-using AsyncSocketNetwork.Models;
-using AsyncSocketNetwork.Example.Utilities;
+﻿using RabanSoft.AsyncSocketNetwork.Example.Utilities.Models;
+using RabanSoft.AsyncSocketNetwork.Models;
+using RabanSoft.AsyncSocketNetwork.Example.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Sockets;
 using System.Threading.Tasks;
 
-namespace AsyncSocketNetwork.Example.Server {
+namespace RabanSoft.AsyncSocketNetwork.Example.Server {
     /// <summary>
     /// Manages chat server by extending <see cref="SocketServer"/> and handles its connection/protocol with clients by implementing <see cref="IServerHandler"/> and <seealso cref="IClientHandler"/>.
     /// </summary>

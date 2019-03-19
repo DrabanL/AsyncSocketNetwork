@@ -336,3 +336,4 @@ ASALocalRun/
 /Example.Server/obj/Debug
 /Example.Utilities/obj/Debug
 /AsyncSocketNetwork/obj/Debug
+*.nuspec

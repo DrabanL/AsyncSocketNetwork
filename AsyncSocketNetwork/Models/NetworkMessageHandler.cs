@@ -1,4 +1,4 @@
-﻿namespace AsyncSocketNetwork.Models {
+﻿namespace RabanSoft.AsyncSocketNetwork.Models {
     /// <summary>
     /// Method for handling partial send/receive operations and transforming to/from full network messages.
     /// </summary>

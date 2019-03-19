@@ -1,4 +1,4 @@
-﻿namespace AsyncSocketNetwork.Default {
+﻿namespace RabanSoft.AsyncSocketNetwork.Default {
     /// <summary>
     /// Includes functions related to encryption of a <see cref="AsyncSocketNetwork.Internals.SocketBase"/> message.
     /// </summary>

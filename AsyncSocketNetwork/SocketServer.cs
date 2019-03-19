@@ -1,10 +1,9 @@
-﻿using AsyncSocketNetwork.Models;
+﻿using RabanSoft.AsyncSocketNetwork.Models;
 using System;
-using System.Net;
 using System.Net.Sockets;
 using System.Threading.Tasks;
 
-namespace AsyncSocketNetwork {
+namespace RabanSoft.AsyncSocketNetwork {
     /// <summary>
     /// Socket server implementation based on <see cref="SocketBase"/>.
     /// </summary>

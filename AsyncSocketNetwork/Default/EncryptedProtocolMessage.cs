@@ -1,4 +1,4 @@
-﻿namespace AsyncSocketNetwork.Default {
+﻿namespace RabanSoft.AsyncSocketNetwork.Default {
     /// <summary>
     /// Simple XOR obfuscation implementation on top of <see cref="ProtocolMessage"/>
     /// </summary>

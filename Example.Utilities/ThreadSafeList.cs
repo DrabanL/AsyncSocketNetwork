@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 
-namespace AsyncSocketNetwork.Example.Utilities {
+namespace RabanSoft.AsyncSocketNetwork.Example.Utilities {
     /// <summary>
     /// A generic List that supports Multi-Threaded access, waiting on execution of any read/write operations until they can be processed. 
     /// </summary>

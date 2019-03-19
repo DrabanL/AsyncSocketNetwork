@@ -26,3 +26,14 @@ For in-depth look and example for a full client side implementation, you can tak
 
 ## Example Project
 In the example projects you can check our how implementations of a communication protocol and packets obfuscation, for the purpose of a simple Chatting application.
+
+# Nuget package
+Install-Package RabanSoft.AsyncSocketNetwork
+
+or
+
+dotnet add package RabanSoft.AsyncSocketNetwork
+
+or
+
+https://www.nuget.org/packages/RabanSoft.AsyncSocketNetwork

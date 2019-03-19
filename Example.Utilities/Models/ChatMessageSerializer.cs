@@ -1,8 +1,8 @@
-﻿using AsyncSocketNetwork.Models;
+﻿using RabanSoft.AsyncSocketNetwork.Models;
 using System.IO;
 using System.Text;
 
-namespace AsyncSocketNetwork.Example.Utilities.Models {
+namespace RabanSoft.AsyncSocketNetwork.Example.Utilities.Models {
     /// <summary>
     /// Chat System Protocol message serialization implementation that extends <see cref="INetworkMessageSerializationHandler"/>.
     /// The message structure is as follows:

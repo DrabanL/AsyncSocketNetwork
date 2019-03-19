@@ -1,8 +1,8 @@
-﻿using AsyncSocketNetwork.Default;
+﻿using RabanSoft.AsyncSocketNetwork.Default;
 using System;
 using System.Threading.Tasks;
 
-namespace AsyncSocketNetwork.Example.Server {
+namespace RabanSoft.AsyncSocketNetwork.Example.Server {
     internal class Program {
         private static async Task Main(string[] args) {
             Console.WriteLine("Chat server starting..");

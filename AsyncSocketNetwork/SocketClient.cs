@@ -1,16 +1,15 @@
-﻿using AsyncSocketNetwork.Models;
+﻿using RabanSoft.AsyncSocketNetwork.Models;
 using System;
-using System.IO;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace AsyncSocketNetwork {
+namespace RabanSoft.AsyncSocketNetwork {
     /// <summary>
     /// Socket client implementation based on <see cref="SocketBase"/>.
     /// </summary>
-    public class SocketClient : IDisposable  {
+    public class SocketClient : IDisposable {
 
         public EndPoint RemoteEndPoint => _client?.Client.RemoteEndPoint;
         public bool Connected => _client?.Connected ?? false;
@@ -21,7 +20,7 @@ namespace AsyncSocketNetwork {
 
         public IClientHandler ClientHandler;
         public INetworkMessageSerializationHandler SerializationHandler;
-        
+
         /// <summary>
         /// Initializes <see cref="Socket"/> with default options to prepare it for first use.
         /// </summary>
@@ -70,14 +69,14 @@ namespace AsyncSocketNetwork {
                     } catch (Exception ex) {
                         if (ex.InnerException is SocketException) {
                             var socketEx = ex.InnerException as SocketException;
-                            if (socketEx.SocketErrorCode == SocketError.ConnectionReset || 
+                            if (socketEx.SocketErrorCode == SocketError.ConnectionReset ||
                                 socketEx.SocketErrorCode == SocketError.ConnectionAborted) {
                                 // 'ConnectionReset' will happen when the other party has closed the connection unexpectedly
                                 ClientHandler?.OnConnectionClosedAsync(this);
                                 break;
                             }
                         }
-                        
+
                         // unhandled
                         throw;
                     }
@@ -169,7 +168,7 @@ namespace AsyncSocketNetwork {
 
         protected virtual void Dispose(bool disposing) {
             if (!disposedValue) {
-                
+
                 if (disposing) {
                     // TODO: dispose managed state (managed objects).
                     disposeManagedObjects();

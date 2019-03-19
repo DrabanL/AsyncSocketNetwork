@@ -1,6 +1,6 @@
-﻿using AsyncSocketNetwork.Default;
+﻿using RabanSoft.AsyncSocketNetwork.Default;
 
-namespace AsyncSocketNetwork.Example.Utilities.Models {
+namespace RabanSoft.AsyncSocketNetwork.Example.Utilities.Models {
     /// <summary>
     /// Chat System Protocol message object that extends <see cref="EncryptedProtocolMessage"/> with properites relevant for the chat system.
     /// </summary>

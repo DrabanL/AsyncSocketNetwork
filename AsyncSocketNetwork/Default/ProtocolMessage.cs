@@ -1,9 +1,9 @@
-﻿using AsyncSocketNetwork.Models;
+﻿using RabanSoft.AsyncSocketNetwork.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AsyncSocketNetwork.Default {
+namespace RabanSoft.AsyncSocketNetwork.Default {
     /// <summary>
     /// Simple protcol message format structured as:
     /// <para>[0..3] Length (uint)</para>
@@ -24,7 +24,7 @@ namespace AsyncSocketNetwork.Default {
         /// <summary>
         /// The maximum allowed size of a complete message.
         /// </summary>
-        private uint _maxMessageSize;
+        private readonly uint _maxMessageSize;
 
         public ProtocolMessage(int bufferSize = 512, uint maxMessageSize = 0x1024) {
             _maxMessageSize = maxMessageSize;

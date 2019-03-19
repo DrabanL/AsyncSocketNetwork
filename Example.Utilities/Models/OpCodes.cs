@@ -1,4 +1,4 @@
-﻿namespace AsyncSocketNetwork.Example.Utilities.Models {
+﻿namespace RabanSoft.AsyncSocketNetwork.Example.Utilities.Models {
     /// <summary>
     /// Defines the supported chat protocol functionalities.
     /// </summary>

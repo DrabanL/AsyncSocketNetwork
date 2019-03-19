@@ -1,7 +1,7 @@
 ﻿using System.Net.Sockets;
 using System.Threading.Tasks;
 
-namespace AsyncSocketNetwork.Example.Server {
+namespace RabanSoft.AsyncSocketNetwork.Example.Server {
     /// <summary>
     /// Extends <see cref="SocketClient"/> and implements chat member properties.
     /// </summary>

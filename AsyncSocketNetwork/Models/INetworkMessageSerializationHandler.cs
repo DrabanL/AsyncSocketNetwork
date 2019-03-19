@@ -1,4 +1,4 @@
-﻿namespace AsyncSocketNetwork.Models {
+﻿namespace RabanSoft.AsyncSocketNetwork.Models {
     /// <summary>
     /// Handles transformation of raw data to and from network message object.
     /// </summary>

@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Net.Sockets;
 using System.Threading.Tasks;
 
-namespace AsyncSocketNetwork.Models {
+namespace RabanSoft.AsyncSocketNetwork.Models {
     /// <summary>
     /// Handles socket client event operations.
     /// </summary>

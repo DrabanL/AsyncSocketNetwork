@@ -1,10 +1,8 @@
-﻿using AsyncSocketNetwork.Default;
-using AsyncSocketNetwork.Example.Utilities.Models;
+﻿using RabanSoft.AsyncSocketNetwork.Example.Utilities.Models;
 using System;
-using System.Threading;
 using System.Threading.Tasks;
 
-namespace AsyncSocketNetwork.Example.Client {
+namespace RabanSoft.AsyncSocketNetwork.Example.Client {
     internal class Program {
         private static string _nickname;
         private static ChatClient _chatClient;
