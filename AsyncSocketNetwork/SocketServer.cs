@@ -18,7 +18,7 @@ namespace RabanSoft.AsyncSocketNetwork {
 
         public IServerHandler ServerHandler;
 
-        public SocketServer() { }
+        public SocketServer() { } 
 
         /// <summary>
         /// Binds and asynchronous starts a listener on <paramref name="port"/> with a limit of <paramref name="backlog"/> connections.
